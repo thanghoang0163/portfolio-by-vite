@@ -2,10 +2,10 @@
 
 @layer components {
   .input-container {
-    @apply flex w-full flex-col;
+    @apply flex w-full flex-col border-b-[0.1rem] border-b-border-color;
   }
 
   .input {
-    @apply flex items-center border-b-[0.1rem] border-b-[#B5B5B5] bg-transparent pr-4 text-blur-text-color outline-none placeholder:text-2xl;
+    @apply flex items-center  bg-transparent pr-4 text-blur-text-color outline-none placeholder:text-2xl;
   }
 }
