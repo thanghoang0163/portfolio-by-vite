@@ -1,0 +1,23 @@
+@tailwind components;
+
+@layer components {
+  .home__description {
+    @apply my-8;
+  }
+
+  .home__big-title {
+    @apply mb-8;
+  }
+
+  .home__list {
+    @apply grid grid-cols-2 gap-8 text-black;
+  }
+
+  .home__item {
+    @apply rounded-primary-border-radius px-8 py-4 first:bg-light-orange last:bg-light-orange [&:nth-child(2)]:bg-[#F2F7FC] [&:nth-child(3)]:bg-[#F2F7FC];
+  }
+
+  .home__title {
+    @apply mb-2;
+  }
+}

@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+@font-face {
+  font-family: "Tahoma";
+  src:
+    local("Tahoma"),
+    url("./assets/fonts/Tahoma-Regular.ttf") format("truetype");
+}
+
+@layer base {
+  :root {
+    --yellow-color: #f7fc0e;
+    --gray-color: #9e9e9e;
+    --red-color: #dc3546;
+    --green-color: #19e186;
+    --orange-color: #c76a0b;
+    --blue-color: #13d1fb;
+    --pink-color: #ff8d8d;
+    --dark-purple-color: #6f4ff2;
+    --secondary-color: #89c6ff;
+    --primary-color: #3633d0;
+    --dark-sky-color: #11979f;
+    --primary-background-color: #e7f2ff;
+    --border-color: #dadada;
+    --btn-color: #303030;
+    --blur-background-color: #53535360;
+  }
+
+  * {
+    @apply box-border font-[Tahoma];
+    -webkit-tap-highlight-color: transparent;
+    -o-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+  }
+
+  html {
+    @apply text-[62.5%];
+  }
+
+  body {
+    @apply text-2xl;
+  }
+
+  button {
+    @apply cursor-pointer bg-transparent p-0 outline-none;
+  }
+
+  textarea {
+    @apply w-full resize-none border-[0.1rem] p-4 outline-none;
+  }
+
+  input {
+    @apply w-full border-none outline-none;
+  }
+
+  a {
+    @apply inline-block text-black no-underline;
+  }
+
+  span {
+    @apply inline-block leading-normal;
+  }
+
+  /* Scroll Bar*/
+  html *::-webkit-scrollbar {
+    @apply w-4;
+  }
+
+  /* Handle */
+  html *::-webkit-scrollbar-thumb {
+    @apply rounded-[1rem] bg-slate-400 hover:bg-slate-500;
+  }
+}

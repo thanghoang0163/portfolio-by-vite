@@ -1,0 +1,40 @@
+@tailwind components;
+
+@layer components {
+  .info-section {
+    @apply w-full rounded-primary-border-radius bg-dark-white px-16;
+  }
+
+  .info-section__item {
+    @apply flex items-center border-b-[0.1rem] border-b-border-color py-8 last:border-none;
+  }
+
+  .info-section__icon {
+    @apply text-3xl;
+  }
+
+  .info-section__item:nth-child(2) .info-section__icon {
+    @apply text-[#FF9C1B];
+  }
+
+  .info-section__item:first-child .info-section__icon,
+  .info-section__item:nth-child(3) .info-section__icon {
+    @apply text-red;
+  }
+
+  .info-text-container {
+    @apply ml-6 flex flex-col text-black;
+  }
+
+  .info-title {
+    @apply text-blur-text-color;
+  }
+
+  .info-download-btn {
+    @apply px-8 py-4;
+  }
+
+  .info-download-icon {
+    @apply mr-2 h-[2rem] w-[2rem];
+  }
+}
