@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 import Image from "~/components/image/image";
@@ -15,7 +13,6 @@ import "./generalPage.css";
 
 export default function GeneralPage({ title, children }) {
   const [theme, setTheme] = useState();
-  const [isFirst, setIsFirst] = useState(false);
 
   const htmlElementClassList = () => document.documentElement.classList;
 
@@ -55,15 +52,11 @@ export default function GeneralPage({ title, children }) {
       setTheme("light");
       setLightTheme();
     }
-
-    "isFirst" in localStorage
-      ? setIsFirst(localStorage.isFirst)
-      : localStorage.setItem("isFirst", true);
   }, []);
 
   return (
     <main className={clsx("general-page bg-dark-white", "dark:bg-slate-800")}>
-      <div className="general-page__header" data-aos={isFirst && "fade-down"}>
+      <div className="general-page__header">
         <Image
           className="general-page__image"
           src={BeatriceWambui}
@@ -84,7 +77,7 @@ export default function GeneralPage({ title, children }) {
         </Button>
       </div>
       <div className="general-page__content">
-        <Category aos={isFirst && "zoom-in"} />
+        <Category />
         <div className="general-page__detail">
           <LeftSide />
           <GeneralContent title={title}>{children}</GeneralContent>

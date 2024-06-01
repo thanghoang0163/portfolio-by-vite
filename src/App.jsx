@@ -20,7 +20,7 @@ function App() {
   return (
     <React.StrictMode>
       <div className="app">
-        <Suspense fallback={'...Loading'}>
+        <Suspense>
           <Routes>
             <Route element={<PublicRoutes />}>
               {publicRoutes.map((route, index) => {
@@ -30,7 +30,7 @@ function App() {
                 );
               })}
             </Route>
-            <Route path="*" element={'Not Found'} />
+            <Route path="*" element={"Not Found"} />
           </Routes>
         </Suspense>
       </div>

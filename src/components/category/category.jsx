@@ -5,11 +5,11 @@ import { categories } from "./index";
 
 import "./category.css";
 
-export default function Category({ aos }) {
+export default function Category() {
   const pathName = useLocation().pathname;
 
   return (
-    <ul className="category" data-aos={aos}>
+    <ul className="category">
       {categories.map((category, index) => {
         return (
           <a
